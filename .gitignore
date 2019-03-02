@@ -1,0 +1,2 @@
+# Ignore ngrok (used to route web requests to local server)
+ngrok
