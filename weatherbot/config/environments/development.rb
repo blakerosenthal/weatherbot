@@ -51,4 +51,11 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # Configure auth settings for the Slack client.
+  # SLACK_API_TOKEN environment variable should be set
+  # when booting rails.
+  Slack.configure do |config|
+    config.token = ENV['SLACK_API_TOKEN']
+  end
 end
